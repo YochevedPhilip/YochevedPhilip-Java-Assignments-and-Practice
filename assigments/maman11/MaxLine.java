@@ -1,6 +1,8 @@
 import java.util.Scanner;
 /*
- * A class that get 3 points coordinats, and return the longest
+ * A class that get 3 points coordinats 
+ * calculate the longest... 
+ * and print the 
  */
 public class MaxLine{ 
 
@@ -34,33 +36,30 @@ public class MaxLine{
             maxLong=longAC;
         }
         
-        int xPrint1, xPrint2, yPrint1, yPrint2;   
-        switch(maxLong) {
-            case longAB: 
-                xPrint1=x1; 
-                xPrint2=x2; 
-                yPrint1=y1; 
-                yPrint2=y2;
-                break;
-            case longBC: 
-                xPrint1=x2; 
-                xPrint2=x3; 
-                yPrint1=y2; 
-                yPrint2=y3;
-                break;
-            case longAC: 
-                xPrint1=x1; 
-                xPrint2=x3; 
-                yPrint1=y1; 
-                yPrint2=y3;
-                break;
-        }
+       int xPrint1, xPrint2, yPrint1, yPrint2;  
+       
+        if((maxLong)==longAB) { 
+            xPrint1=x1; 
+            xPrint2=x2; 
+            yPrint1=y1; 
+            yPrint2=y2; 
+       } else if((maxLong)==longBC) { 
+          xPrint1=x2;                      
+          xPrint2=x3; 
+          yPrint1=y2; 
+          yPrint2=y3;
+       } else {
+           xPrint1=x1; 
+           xPrint2=x3; 
+           yPrint1=y1; 
+           yPrint2=y3; 
+       }
+           
+        
         
         String points="("+ xPrint1 + "," + yPrint1 + ")" + "," + "("+ xPrint2 + "," + yPrint2 + ")";
         System.out.println("Maxlinecreatedbythefollowingpoints:" + points);
-
-
-        
+       
         
         //...
     } // end of method main
