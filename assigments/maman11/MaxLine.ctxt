@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=MaxLine
-comment0.text=\r\n\ A\ class\ that\ get\ 3\ points\ coordinats\ \r\n\ calculate\ the\ longest...\ \r\n\ and\ print\ the\ \r\n
+comment0.text=\r\n\ This\ program\ calculates\ the\ longest\ distance\ between\ three\ given\ points\ on\ a\ 2D\ plane.\r\n\ It\ reads\ the\ coordinates\ of\ the\ three\ points,\ computes\ the\ lengths\ of\ the\ three\ possible\ lines,\r\n\ \ and\ identifies\ the\ pair\ of\ points\ that\ \u05D6form\ the\ longest\ line\ segment.\r\n\ @author\ (Yocheved\ Philip)\r\n\ @version\ (208664433)\r\n
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
 numComments=2

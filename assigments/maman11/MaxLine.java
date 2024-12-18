@@ -1,13 +1,14 @@
 import java.util.Scanner;
-/*
- * A class that get 3 points coordinats 
- * calculate the longest... 
- * and print the 
+/**
+ * This program calculates the longest distance between three given points on a 2D plane.
+ * It reads the coordinates of the three points, computes the lengths of the three possible lines,
+ *  and identifies the pair of points that זform the longest line segment.
+ * @author (Yocheved Philip)
+ * @version (208664433)
  */
 public class MaxLine{ 
-
     public static void main (String [] args) {
-
+        
         Scanner scan = new Scanner (System.in);
         System.out.println("Enter first point coordinates:");
         int x1 = scan.nextInt();
@@ -18,49 +19,21 @@ public class MaxLine{
         System.out.println ("Enter third point coordinates:");
         int x3 = scan.nextInt();
         int y3 = scan.nextInt(); 
-        
+
         double longAB = Math.sqrt(Math.pow(x1-x2, 2)+Math.pow(y1-y2, 2)); 
         double longBC = Math.sqrt(Math.pow(x2-x3, 2)+Math.pow(y2-y3, 2)); 
         double longAC = Math.sqrt(Math.pow(x1-x3, 2)+Math.pow(y1-y3, 2)); 
-        
-        double maxLong; 
-        
-        if(longAB>=longBC) {
-            maxLong=longAB; 
-            if(longAB<longAC) {
-                maxLong=longAC; 
-            }
-        } else if (longBC>=longAC) {
-            maxLong=longBC; 
+        String points;
+
+        if(longAB>=longBC && longAB>=longAC) {
+            points="("+ x1 + "," + y1 + ")" + ", " + "("+ x2 + "," + y2 + ").";
+        } else if (longBC>=longAC && longBC >= longAB) {
+            points="("+ x2 + "," + y2 + ")" + ", " + "("+ x3 + "," + x3 + ").";
         } else {
-            maxLong=longAC;
+            points="("+ x1 + "," + y1 + ")" + ", " + "("+ x3 + "," + y3 + ").";
         }
         
-       int xPrint1, xPrint2, yPrint1, yPrint2;  
-       
-        if((maxLong)==longAB) { 
-            xPrint1=x1; 
-            xPrint2=x2; 
-            yPrint1=y1; 
-            yPrint2=y2; 
-       } else if((maxLong)==longBC) { 
-          xPrint1=x2;                      
-          xPrint2=x3; 
-          yPrint1=y2; 
-          yPrint2=y3;
-       } else {
-           xPrint1=x1; 
-           xPrint2=x3; 
-           yPrint1=y1; 
-           yPrint2=y3; 
-       }
-           
-        
-        
-        String points="("+ xPrint1 + "," + yPrint1 + ")" + "," + "("+ xPrint2 + "," + yPrint2 + ")";
         System.out.println("Maxlinecreatedbythefollowingpoints:" + points);
-       
         
-        //...
     } // end of method main
 } //end of class MaxLine
